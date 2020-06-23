@@ -3,9 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Structure
 
 <Navbar>
-    <NavbarItem lg={order:1} left>
+    <NavItem lg={order:1} left>
         <Brand />
-    <NavbarItem/>
+    <NavItem/>
     <Collapse isOpen={!collapsed} >
         <Nav>
             <NavItem>
@@ -40,6 +40,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     </Nav>
     <!-- Can we remove NavItem with Toggler, Not required Dugh -->
     <NavItem>
-        <NavbarToggler lg={order:3, visible} md={visible} sm={visible} icon={open: HamburgerIcon, close: CloseIcon}>
+        <NavbarToggler collapsed lg={order:3, visible} md={visible} sm={visible} icon={collapsed: HamburgerIcon, expanded: CloseIcon}>
     </NavItem>
   </Navbar>

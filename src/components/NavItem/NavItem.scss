@@ -1,0 +1,17 @@
+@import "../../styles/grid.scss";
+
+.nav-item {
+    position: relative;
+    display: flex;
+    height: 100%;
+    line-height: calc(2rem + 2px);
+    text-decoration: none;
+    color: $secondary-color;
+    padding: 1rem 1rem;
+    white-space: nowrap;
+    align-self: center;
+    $max-width-val: map-get($container-max-widths, "sm");
+    @include mediaquery($max-width-val, false) {
+        flex-basis: 100%;
+    }
+}

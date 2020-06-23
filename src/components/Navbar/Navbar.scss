@@ -1,0 +1,12 @@
+@import "../../styles/grid.scss";
+
+.navbar {
+    display: flex;
+    background-color: $primary-color;
+    border-bottom: 2px solid #dedede;
+    color: $secondary-color;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
+}

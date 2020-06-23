@@ -1,0 +1,14 @@
+.navbar-collapse {
+    &.collapsed {
+        display: none;
+    }
+
+    &.expanded {
+        flex-basis: 100%;
+        /*display:block;*/
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}

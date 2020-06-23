@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./Logo.scss";
 
 const Logo: FC<{}> = () => {
     return (

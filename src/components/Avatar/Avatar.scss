@@ -1,0 +1,20 @@
+@import "../../styles/grid.scss";
+
+.navbar-logo {
+    text-decoration: none;
+    color: $secondary-color;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.avatar {
+    width: 1.3125rem;
+    text-align: center;
+    background-color: $tertiary-color;
+}
+
+.rounded {
+    border: 1px solid $secondary-color;
+    padding: 5px;
+    border-radius: 50%;
+}

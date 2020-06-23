@@ -24,18 +24,19 @@
     }
 }
 
+.lg {
+    display: none;
+    @include show-on("lg");
+}
+
 .md {
-    @include hide-on("md");
-    &.expanded {
-        @include show-on("md");
-    }
+    display: none;
+    @include show-on("md");
 }
 
 .sm {
-    @include hide-on("sm");
-    &.expanded {
-        @include show-on("sm");
-    }
+    display: none;
+    @include show-on("sm");
 }
 
 .hidden-lg {

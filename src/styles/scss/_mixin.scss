@@ -83,8 +83,8 @@
 }
 
 @mixin show-on($resolution: "s") {
-    $media-query-val: map-get($container-max-widths, $resolution);
-    @include mediaquery($media-query-val, false) {
-        display: block;
+    $media-query-val: map-get($grid-breakpoints, $resolution);
+    @include mediaquery($media-query-val, true) {
+        display: flex;
     }
 }

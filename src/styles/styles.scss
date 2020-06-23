@@ -8,82 +8,12 @@ li {
 }
 
 .navbar {
-    display: flex;
-    background-color: $primary-color;
-    border-bottom: 2px solid #dedede;
-    color: $secondary-color;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .navbar-logo {
-        text-decoration: none;
-        color: $secondary-color;
-        font-size: 2rem;
-        margin-right: 10px;
-    }
-
-    &-nav {
-        $max-width-val: map-get($container-max-widths, "md");
-        @include mediaquery($max-width-val, false) {
-            flex-wrap: wrap;
-        }
-    }
-
     .navbar-collapse {
         flex-grow: 1;
         align-items: center;
         flex-wrap: nowrap;
 
         .navbar-nav {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 100%;
-
-            .nav-item {
-                display: flex;
-                height: 100%;
-                $max-width-val: map-get($container-max-widths, "sm");
-                @include mediaquery($max-width-val, false) {
-                    flex-basis: 100%;
-                }
-
-                &.link {
-                    position: relative;
-                    @include hover {
-                        @include after {
-                            background: #000;
-                            height: 2px;
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            width: 100%;
-                        }
-                    }
-                    .nav-link {
-                        line-height: calc(2rem + 2px);
-                    }
-
-                    $max-width-val: map-get($container-max-widths, "md");
-                    @include mediaquery($max-width-val, false) {
-                        flex-basis: 100%;
-                    }
-                }
-            }
-
-            .nav-link {
-                text-decoration: none;
-                color: $secondary-color;
-                padding: 1rem 1rem;
-                white-space: nowrap;
-                align-self: center;
-
-                @include hover {
-                    color: #000;
-                }
-            }
-
             &.reverse {
                 flex-direction: row-reverse;
             }
@@ -116,25 +46,6 @@ li {
     @include mediaquery($min-width-val) {
         flex-wrap: nowrap;
     }
-
-    .navbar-toggler {
-        border: none;
-        background-repeat: no-repeat;
-        background-size: cover;
-        align-self: center;
-        background-color: transparent !important;
-        display: none;
-        width: 1.5rem;
-        height: 1.5rem;
-        cursor: pointer;
-        @include show-on("md");
-        @include col-order(3);
-
-        $max-width-val: map-get($container-max-widths, "md");
-        @include mediaquery($max-width-val, false) {
-            @include col-order(2);
-        }
-    }
 }
 
 .btn {
@@ -161,21 +72,9 @@ li {
     }
 }
 
-.avatar {
-    width: 1.3125rem;
-    text-align: center;
-    background-color: $tertiary-color;
-}
-
 .card {
     background: #fff;
     flex-direction: row;
-}
-
-.rounded {
-    border: 1px solid $secondary-color;
-    padding: 5px;
-    border-radius: 50%;
 }
 
 .bg-secondary {

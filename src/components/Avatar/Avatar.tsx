@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import calendarSVG from "../../calendar.svg";
+import "./Avatar.scss";
 
 const Avatar: FC<{}> = () => {
     return (

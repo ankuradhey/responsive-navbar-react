@@ -1,19 +1,9 @@
 import React, { FC } from "react";
+import "./NavItem.scss";
+import { NavItemProp } from "./index";
 
-export const Link: FC<{ reverse?: boolean }> = ({ children, reverse = false }) => {
-    return (
-        <li className="nav-item link">
-            <a className="nav-link" href="/">
-                {children}
-            </a>
-        </li>
-    );
+const Item: FC<NavItemProp> = ({ children, left = true, lg }) => {
+    return <div className={`nav-item ${lg && lg.hidden ? "hidden-lg" : ""}`}>{children}</div>;
 };
 
-export const Item: FC<{}> = ({ children }) => {
-    return (
-        <li className="nav-item">
-            <div className="nav-link">{children}</div>
-        </li>
-    );
-};
+export default Item;
