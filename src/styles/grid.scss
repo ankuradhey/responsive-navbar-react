@@ -1,0 +1,53 @@
+@import "scss/variables";
+@import "scss/mixin";
+
+.container-fluid {
+    @include container();
+}
+
+.container {
+    @include container($grid-gutter);
+    @each $breakpoint, $val in $grid-breakpoints {
+        @include mediaquery($val) {
+            max-width: map-get($container-max-widths, $breakpoint);
+        }
+    }
+}
+.row {
+    @include row($grid-gutter);
+}
+
+.col {
+    @include col($grid-gutter-width);
+    @include mediaquery(32em) {
+        @include col($grid-gutter, true);
+    }
+}
+
+.md {
+    @include hide-on("md");
+    &.expanded {
+        @include show-on("md");
+    }
+}
+
+.sm {
+    @include hide-on("sm");
+    &.expanded {
+        @include show-on("sm");
+    }
+}
+
+.hidden-lg {
+    @media (min-width: 62em) {
+        display: none;
+    }
+}
+
+.xl {
+    @include hide-on("xl");
+}
+
+.visible-lg {
+    @include show-on("lg");
+}

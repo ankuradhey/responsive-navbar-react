@@ -1,0 +1,43 @@
+// $breakPointSM = ["32em", "48em", "62em", "80em"];
+
+$theme-colors: (
+    primary: #fff,
+    secondary: #626570,
+    tertiary: #cece,
+);
+
+$primary-color: map-get($theme-colors, "primary");
+$secondary-color: map-get($theme-colors, "secondary");
+$tertiary-color: map-get($theme-colors, "tertiary");
+
+$grid-breakpoints: (
+    sm: 32em,
+    md: 48em,
+    lg: 62em,
+    xl: 80em,
+);
+
+$container-max-widths: (
+    sm: 575.98px,
+    md: 768px,
+    lg: 991.98px,
+    xl: 1199.98px,
+);
+
+$media-queries: (
+    sm: "@media (min-width: 32em)",
+    md: "@media (min-width: 48em)",
+    lg: "@media (min-width: 62em)",
+    xl: "@media (min-width: 80em)",
+);
+
+$grid-gutter: 30;
+$grid-gutter-width: 30px;
+$grid-count: 12;
+$grid-gutter-col-impact: $grid-gutter/2;
+
+$btn-padding-y: 10px;
+$btn-padding-x: 10px;
+$btn-font-size: 1em;
+$btn-line-height: 100%;
+$btn-border-radius: 3px;
