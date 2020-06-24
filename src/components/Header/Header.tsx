@@ -48,7 +48,7 @@ const Header: FC<{}> = () => {
                         <NavLink href="/">Explore</NavLink>
                     </NavItem>
                 </Nav>
-                <Nav lg={{ hidden: true }}>
+                <Nav sm={{ visible: true }}>
                   <NavItem>
                     <Card 
                       heading={TalkFinanceLabel}

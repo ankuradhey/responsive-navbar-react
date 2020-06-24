@@ -45,6 +45,13 @@
     }
 }
 
+.visible-sm {
+    $sm-min-width-breakpoint: map-get($grid-breakpoints, "sm");
+    @media (min-width: $sm-min-width-breakpoint) {
+        display: none;
+    }
+}
+
 .visible-lg {
     @include show-on("lg");
 }

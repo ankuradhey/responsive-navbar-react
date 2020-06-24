@@ -3,7 +3,7 @@ export { default } from "./Nav";
 export interface NavProps {
     lg?: { hidden?: boolean };
     md?: { hidden?: boolean };
-    sm?: { hidden?: boolean };
+    sm?: { hidden?: boolean, visible?: boolean };
     left?: boolean;
     right?: boolean;
 }
