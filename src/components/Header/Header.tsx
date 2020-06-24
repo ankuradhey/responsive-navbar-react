@@ -17,6 +17,7 @@ import {
   ScheduleCallLabel,
   Devon,
   UnlockScore,
+  Links,
 } from '../../config';
 
 const Header: FC<{}> = () => {
@@ -33,21 +34,11 @@ const Header: FC<{}> = () => {
             </NavItem>
             <NavbarCollapse isOpen={!collapsed}>
                 <Nav lg={{ hidden: true }}>
-                    <NavItem>
-                        <NavLink href="/">For You</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Tasks</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Marketplace</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Accounts</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Explore</NavLink>
-                    </NavItem>
+                    {Links.map((link) => (
+                        <NavItem>
+                          <NavLink href={link.href}>{link.label}</NavLink>
+                        </NavItem>
+                    ))}
                 </Nav>
                 <Nav sm={{ visible: true }}>
                   <NavItem>
@@ -71,21 +62,11 @@ const Header: FC<{}> = () => {
                 </Nav>
             </NavbarCollapse>
             <Nav md={{ hidden: true }} sm={{ hidden: true }}>
+              {Links.map((link) => (
                 <NavItem>
-                    <NavLink href="/">For You</NavLink>
+                  <NavLink href={link.href}>{link.label}</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href="/">Tasks</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Marketplace</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Accounts</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Explore</NavLink>
-                </NavItem>
+              ))}
             </Nav>
             <Nav sm={{ hidden: true }} right>
                 <NavItem>

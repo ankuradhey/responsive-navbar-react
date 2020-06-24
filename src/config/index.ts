@@ -1,5 +1,5 @@
 export const Links = [
-  {label: "ForYou", href: "#ForYou", target: "_self"},
+  {label: "For You", href: "#ForYou", target: "_self"},
   {label: "Tasks", href: "#Tasks", target: "_self"},
   {label: "Marketplace", href: "#Marketplace", target: "_self"},
   {label: "Accounts", href: "#Accounts", target: "_self"},
