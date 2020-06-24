@@ -21,6 +21,6 @@
 
     $max-width-val: map-get($container-max-widths, "md");
     @include mediaquery($max-width-val, false) {
-        flex-basis: 100%;
+        // flex-basis: 100%;
     }
 }

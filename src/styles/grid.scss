@@ -24,31 +24,37 @@
     }
 }
 
-.lg {
-    display: none;
-    @include show-on("lg");
+.hidden-sm {
+    $sm-min-width-breakpoint: map-get($grid-breakpoints, "sm");
+    $sm-max-width-breakpoint: map-get($container-max-widths, "sm");
+    @media (min-width: $sm-min-width-breakpoint) {
+        @media (max-width: $sm-max-width-breakpoint) {
+            display: none;
+        }
+    }
 }
 
-.md {
-    display: none;
-    @include show-on("md");
-}
-
-.sm {
-    display: none;
-    @include show-on("sm");
-}
-
-.hidden-lg {
-    @media (min-width: 62em) {
+.hidden-md {
+    $md-max-width-breakpoint: map-get($container-max-widths, "lg");
+    @media (max-width: $md-max-width-breakpoint) {
         display: none;
     }
 }
 
-.xl {
-    @include hide-on("xl");
+.hidden-lg {
+    $lg-min-width-breakpoint: map-get($grid-breakpoints, "lg");
+    @media (min-width: $lg-min-width-breakpoint) {
+        display: none;
+    }
 }
 
 .visible-lg {
     @include show-on("lg");
+}
+
+.flex-start {
+    align-self: flex-start;
+}
+.flex-end {
+    align-self: flex-end;
 }

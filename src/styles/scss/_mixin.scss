@@ -41,6 +41,14 @@
     }
 }
 
+@mixin mediaquery-min-width($width) {
+    @include mediaquery($width, true);
+}
+
+@mixin mediaquery-max-width($width) {
+    @include mediaquery($width, false);
+}
+
 @mixin col-order($order: 1) {
     order: $order;
 }

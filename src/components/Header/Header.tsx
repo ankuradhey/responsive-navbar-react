@@ -5,8 +5,11 @@ import NavItem from "../NavItem";
 import Nav from "../Nav";
 import NavLink from "../NavLink";
 import NavbarToggler from "../NavbarToggler";
-import hamburgerSVG from "../../hamburger.svg";
+import HamburgerSVG from "../../hamburger.svg";
+import CloseSVG from "../../close.svg";
 import NavbarCollapse from "../NavbarCollapse";
+import Button from "../Button";
+import Avatar from "../Avatar";
 
 const Header: FC<{}> = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
@@ -39,7 +42,7 @@ const Header: FC<{}> = () => {
                     </NavItem>
                 </Nav>
             </NavbarCollapse>
-            <Nav lg={{ visible: true }}>
+            <Nav md={{ hidden: true }} sm={{ hidden: true }}>
                 <NavItem>
                     <NavLink href="/">For You</NavLink>
                 </NavItem>
@@ -56,11 +59,19 @@ const Header: FC<{}> = () => {
                     <NavLink href="/">Explore</NavLink>
                 </NavItem>
             </Nav>
+            <Nav sm={{ hidden: true }} right>
+                <NavItem>
+                    <Avatar />
+                </NavItem>
+                <NavItem>
+                    <Button>Shedule a call</Button>
+                </NavItem>
+            </Nav>
             <NavItem lg={{ hidden: true }}>
                 <NavbarToggler
-                    collapsed
-                    icon={{ collapsed: hamburgerSVG, expanded: hamburgerSVG }}
+                    icon={{ collapsed: HamburgerSVG, expanded: CloseSVG }}
                     onClick={clickHandler}
+                    collapsed={collapsed}
                 />
             </NavItem>
         </Navbar>

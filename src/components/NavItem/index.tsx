@@ -2,6 +2,7 @@ export { default } from "./NavItem";
 
 export interface NavItemProp {
     left?: boolean;
-    children: JSX.Element;
-    lg?: { hidden: boolean };
+    lg?: { hidden?: boolean };
+    md?: { hidden?: boolean };
+    sm?: { hidden?: boolean };
 }
