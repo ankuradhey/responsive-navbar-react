@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.scss';
+import Icon from '../Icon';
 
 /**
  * @description Interface for Props
@@ -10,17 +11,18 @@ import './Card.scss';
 interface Props {
     heading: string;
     action: string;
-    children: React.ReactNode
+    children: React.ReactNode;
+    icon: string;
 }
 
 /**
  * Logo Component
  */
-const Card:React.FC<Props> = ({heading, action, children}:Props) => {
+const Card:React.FC<Props> = ({heading, action, icon}:Props) => {
     return (
       <div className="card__container">
         <div className="card__icon">
-          {children}
+          <Icon icon={icon}/>
         </div>
         <div className="card__content">
             <div className="card__content--heading">

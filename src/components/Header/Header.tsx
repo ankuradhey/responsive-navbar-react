@@ -10,6 +10,13 @@ import CloseSVG from "../../close.svg";
 import NavbarCollapse from "../NavbarCollapse";
 import Button from "../Button";
 import Avatar from "../Avatar";
+import Card from '../Card';
+import {
+  TalkFinanceLabel,
+  ScheduleCallLabel,
+  Devon,
+  UnlockScore,
+} from '../../config';
 
 const Header: FC<{}> = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
@@ -41,6 +48,24 @@ const Header: FC<{}> = () => {
                         <NavLink href="/">Explore</NavLink>
                     </NavItem>
                 </Nav>
+                <Nav lg={{ hidden: true }}>
+                  <NavItem>
+                    <Card 
+                      heading={TalkFinanceLabel}
+                      action={ScheduleCallLabel}
+                      icon="B"
+                    >
+                    </Card>
+                  </NavItem>
+                  <NavItem>
+                    <Card 
+                      heading={Devon}
+                      action={UnlockScore}
+                      icon="D"
+                    >
+                    </Card>
+                  </NavItem>
+                </Nav>
             </NavbarCollapse>
             <Nav md={{ hidden: true }} sm={{ hidden: true }}>
                 <NavItem>
@@ -64,7 +89,7 @@ const Header: FC<{}> = () => {
                     <Avatar />
                 </NavItem>
                 <NavItem>
-                    <Button>Shedule a call</Button>
+                    <Button>{ScheduleCallLabel}</Button>
                 </NavItem>
             </Nav>
             <NavItem lg={{ hidden: true }}>

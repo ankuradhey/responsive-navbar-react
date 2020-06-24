@@ -2,9 +2,6 @@
 
 .card__container {
     display: flex;
-    @media (min-width: $grid-mobile-breakpoint) {
-        display: none;
-    }
     height: pxToRem(90);
     background-color: white;
     margin-bottom: 20px;
