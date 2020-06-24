@@ -1,16 +1,18 @@
 import React from 'react';
+import { IconContext, IconType } from "react-icons";
 
 interface Props {
-    icon: string;
+    Icon: IconType;
+    iconConfig: Object
 }
 /**
  * Icon Component
  */
-const Icon: React.FC<Props> = ({icon}:Props) => {
+const Icon: React.FC<Props> = ({Icon,iconConfig}:Props) => {
     return (
-      <>
-        {icon}
-      </>
+      <IconContext.Provider value={iconConfig}>
+        <Icon />
+      </IconContext.Provider>
     );
 };
 export default Icon;

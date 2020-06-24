@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { MdClass, MdDataUsage } from 'react-icons/md';
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar";
 import NavItem from "../NavItem";
@@ -53,7 +54,8 @@ const Header: FC<{}> = () => {
                     <Card 
                       heading={TalkFinanceLabel}
                       action={ScheduleCallLabel}
-                      icon="B"
+                      icon={MdClass}
+                      iconConfig={{ color: "blue", className: "card__icon__box" }}
                     >
                     </Card>
                   </NavItem>
@@ -61,7 +63,8 @@ const Header: FC<{}> = () => {
                     <Card 
                       heading={Devon}
                       action={UnlockScore}
-                      icon="D"
+                      icon={MdDataUsage}
+                      iconConfig={{ color: "grey", className: "card__icon__circle" }}
                     >
                     </Card>
                   </NavItem>
