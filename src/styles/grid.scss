@@ -26,11 +26,8 @@
 
 .hidden-sm {
     $sm-min-width-breakpoint: map-get($grid-breakpoints, "sm");
-    $sm-max-width-breakpoint: map-get($container-max-widths, "sm");
-    @media (min-width: $sm-min-width-breakpoint) {
-        @media (max-width: $sm-max-width-breakpoint) {
-            display: none;
-        }
+    @media (max-width: $sm-min-width-breakpoint) {
+        display: none;
     }
 }
 
