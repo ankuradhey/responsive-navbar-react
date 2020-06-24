@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { MdClass, MdDataUsage } from 'react-icons/md';
-import Logo from "../Logo/Logo";
+import Logo from "../Logo";
 import Navbar from "../Navbar";
 import NavItem from "../NavItem";
 import Nav from "../Nav";
