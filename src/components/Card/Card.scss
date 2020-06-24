@@ -1,0 +1,36 @@
+@import "../../styles/grid.scss";
+
+.card__container {
+    display: flex;
+    @media (min-width: $grid-mobile-breakpoint) {
+        display: none;
+    }
+    height: pxToRem(90);
+    background-color: white;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.card__icon {
+    align-self: center;
+    font-size: pxToRem(50);
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+}
+
+.card__content--heading {
+    color: $primary-text;
+    font-size: pxToRem(14);
+    font-weight: $semiBoldWeight;
+}
+
+.card__content--action {
+    color: $secondary-text;
+    font-size: pxToRem(12);
+    font-weight: $regularWeight;
+}

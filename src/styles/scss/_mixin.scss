@@ -88,3 +88,7 @@
         display: flex;
     }
 }
+
+@function pxToRem($px) {
+  @return ($px / 16) * 1rem;
+}
