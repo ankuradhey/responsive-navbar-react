@@ -32,7 +32,7 @@ const Header: FC<{}> = () => {
                 <Logo />
             </NavItem>
             <NavbarCollapse isOpen={!collapsed}>
-                <Nav>
+                <Nav lg={{ hidden: true }}>
                     <NavItem>
                         <NavLink href="/">For You</NavLink>
                     </NavItem>
