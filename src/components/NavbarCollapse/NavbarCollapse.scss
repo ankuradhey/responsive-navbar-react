@@ -9,11 +9,11 @@
 
     .navbar-overlay {
         &.expanded {
+            min-height: 100%;
             position: absolute;
             z-index: 1;
             background-color: $color-charcoal;
             width: 100%;
-            height: 100%;
         }
     }
 
@@ -25,7 +25,7 @@
         }
 
         &.expanded {
-            height: 100%;
+            min-height: 100%;
             position: absolute;
             z-index: 2;
             flex-basis: 100%;
@@ -33,13 +33,15 @@
             top: 0;
             background-color: $color-white-light;
             order: 2;
-            width: $mobile-device-width;
+            max-width: $mobile-device-width;
+            width: 100vw;
 
             & > .collapse-content {
             }
         }
 
         & .close-action {
+            z-index:3;
             width: 20px;
             height: 20px;
             right: 10px;
@@ -49,7 +51,10 @@
         }
 
         .navbar-nav {
-            flex-direction: column;
+            flex-direction: row;
+            .nav-item {
+                flex-basis:100%
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import './Button.scss';
 
 const Button: FC<{
     className?: string;

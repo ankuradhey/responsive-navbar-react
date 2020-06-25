@@ -6,7 +6,7 @@
     align-items: center;
     height: 100%;
 
-    $max-width-val: map-get($container-max-widths, "md");
+    $max-width-val: map-get($container-max-widths, "lg");
     @include mediaquery($max-width-val, false) {
         flex-wrap: wrap;
     }

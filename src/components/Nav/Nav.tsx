@@ -8,7 +8,7 @@ const Nav: FC<NavProps> = ({ children, lg, md, sm, left, right }) => {
     const smClass = sm && sm.hidden ? "hidden-sm" : "";
     const smVisibleClass = sm && sm.visible ? "visible-sm" : "";
     const leftClass = left ? "flex-start" : "";
-    const rightClass = right ? "right-end" : "";
+    const rightClass = right ? "flex-end" : "";
     return (
         <div className={`navbar-nav ${lgClass} ${mdClass} ${smClass} ${leftClass} ${rightClass} ${smVisibleClass}`}>
             {children}

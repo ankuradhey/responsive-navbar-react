@@ -28,6 +28,7 @@ const App = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
 
     const clickHandler = () => {
+        console.log(collapsed);
         setCollapsed(!collapsed);
     };
 
@@ -45,7 +46,7 @@ const App = () => {
                             </NavItem>
                         ))}
                     </Nav>
-                    <Nav sm={{ visible: true }}>
+                    <Nav lg={{ hidden: true }}>
                         <NavItem>
                             <Card
                                 heading={TalkFinanceLabel}
