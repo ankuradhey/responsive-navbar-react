@@ -17,7 +17,7 @@ import {
   ScheduleCallLabel,
   Devon,
   UnlockScore,
-  Links,
+  NavLinks,
 } from '../../config';
 
 const Header: FC<{}> = () => {
@@ -34,7 +34,7 @@ const Header: FC<{}> = () => {
             </NavItem>
             <NavbarCollapse isOpen={!collapsed}>
                 <Nav lg={{ hidden: true }}>
-                    {Links.map((link) => (
+                    {NavLinks.map((link) => (
                         <NavItem>
                           <NavLink href={link.href}>{link.label}</NavLink>
                         </NavItem>
@@ -62,7 +62,7 @@ const Header: FC<{}> = () => {
                 </Nav>
             </NavbarCollapse>
             <Nav md={{ hidden: true }} sm={{ hidden: true }}>
-              {Links.map((link) => (
+              {NavLinks.map((link) => (
                 <NavItem>
                   <NavLink href={link.href}>{link.label}</NavLink>
                 </NavItem>

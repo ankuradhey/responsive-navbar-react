@@ -19,7 +19,8 @@ import {
   ScheduleCallLabel,
   Devon,
   UnlockScore,
-  Links,
+  NavLinks,
+  ProfileLinks,
 } from './config'
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
             </NavItem>
             <NavbarCollapse isOpen={!collapsed}>
                 <Nav lg={{ hidden: true }}>
-                    {Links.map((link) => (
+                    {NavLinks.map((link) => (
                         <NavItem>
                           <NavLink href={link.href}>{link.label}</NavLink>
                         </NavItem>
@@ -60,12 +61,17 @@ const App = () => {
                       icon={MdDataUsage}
                       iconConfig={{ color: "grey", className: "card__icon__circle" }}
                     >
+                      {ProfileLinks.map((link) => (
+                          <NavItem>
+                            <NavLink href={link.href}>{link.label}</NavLink>
+                          </NavItem>
+                        ))}
                     </Card>
                   </NavItem>
                 </Nav>
             </NavbarCollapse>
             <Nav md={{ hidden: true }} sm={{ hidden: true }}>
-              {Links.map((link) => (
+              {NavLinks.map((link) => (
                 <NavItem>
                   <NavLink href={link.href}>{link.label}</NavLink>
                 </NavItem>

@@ -12,7 +12,7 @@ import { IconType } from 'react-icons';
 interface Props {
     heading: string;
     action: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     icon: IconType;
     iconConfig: Object;
 }
@@ -20,20 +20,26 @@ interface Props {
 /**
  * Logo Component
  */
-const Card:React.FC<Props> = ({heading, action, icon, iconConfig}:Props) => {
+const Card:React.FC<Props> = ({heading, action, icon, iconConfig, children}:Props) => {
     return (
       <div className="card__container">
-        <div className="card__icon">
-          <Icon Icon={icon} iconConfig={iconConfig}/>
+        <div className="card__container--header">
+          <div className="card__icon">
+            <Icon Icon={icon} iconConfig={iconConfig}/>
+          </div>
+          <div className="card__header">
+              <div className="card__header--heading">
+                  {heading}
+              </div>
+              <div className="card__header--action">
+                  {action}
+              </div>
+          </div>
         </div>
-        <div className="card__content">
-            <div className="card__content--heading">
-                {heading}
-            </div>
-            <div className="card__content--action">
-                {action}
-            </div>
+        {children && (<div className="card__container--content">
+          {children}
         </div>
+        )}
       </div>
     );
 };
