@@ -15,6 +15,7 @@ import {
     Card,
 } from "./components";
 import {
+    LogoText,
     TalkFinanceLabel,
     ScheduleCallLabel,
     Devon,
@@ -34,7 +35,7 @@ const App = () => {
         <div className="App">
             <Navbar className="container-fluid navbar">
                 <NavItem>
-                    <Logo />
+                    <Logo logoLabel={LogoText}/>
                 </NavItem>
                 <NavbarCollapse isOpen={!collapsed} onClick={clickHandler}>
                     <Nav lg={{ hidden: true }}>

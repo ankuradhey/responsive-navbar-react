@@ -1,10 +1,18 @@
 import React, { FC } from "react";
 import "./Logo.scss";
 
-const Logo: FC<{}> = () => {
+/**
+ * @description Interface for Props
+ * @param logoLabel  Prop for 'header Text'.
+ */
+interface Props {
+    logoLabel:string;
+}
+
+const Logo:FC<Props> = ({logoLabel}:Props) => {
     return (
         <a href="/" className="navbar-logo">
-            Logo
+            {logoLabel}
         </a>
     );
 };

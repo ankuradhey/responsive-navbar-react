@@ -2,7 +2,7 @@
 
 .navbar {
     display: flex;
-    border-bottom: 2px solid #dedede;
+    border-bottom: 2px solid $color-white-light;
     color: $secondary-color;
     justify-content: space-between;
     flex-wrap: wrap;

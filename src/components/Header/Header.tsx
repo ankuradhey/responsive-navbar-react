@@ -12,7 +12,7 @@ import NavbarCollapse from "../NavbarCollapse";
 import Button from "../Button";
 import Avatar from "../Avatar";
 import Card from "../Card";
-import { TalkFinanceLabel, ScheduleCallLabel, Devon, UnlockScore, NavLinks } from "../../config";
+import {LogoText, TalkFinanceLabel, ScheduleCallLabel, Devon, UnlockScore, NavLinks } from "../../config";
 
 const Header: FC<{}> = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
@@ -24,7 +24,7 @@ const Header: FC<{}> = () => {
     return (
         <Navbar className="container-fluid navbar">
             <NavItem>
-                <Logo />
+                <Logo logoLabel={LogoText}/>
             </NavItem>
             <NavbarCollapse isOpen={!collapsed} onClick={clickHandler}>
                 <Nav lg={{ hidden: true }}>
