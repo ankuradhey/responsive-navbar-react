@@ -11,7 +11,7 @@ $secondary-color: map-get($theme-colors, "secondary");
 $tertiary-color: map-get($theme-colors, "tertiary");
 
 $grid-breakpoints: (
-    sm: 32em,
+    sm: 36em,
     md: 48em,
     lg: 62em,
     xl: 80em,
@@ -25,7 +25,7 @@ $container-max-widths: (
 );
 
 $media-queries: (
-    sm: "@media (min-width: 32em)",
+    sm: "@media (min-width: 36em)",
     md: "@media (min-width: 48em)",
     lg: "@media (min-width: 62em)",
     xl: "@media (min-width: 80em)",
@@ -48,6 +48,7 @@ $btn-border-radius: 3px;
 // Colors
 $color-black-dark: #000000;
 $color-white-light: #eeeeee;
+$color-white: #ffffff;
 $primary-text: "#FFFFFF";
 $secondary-text: "#6D6260";
 

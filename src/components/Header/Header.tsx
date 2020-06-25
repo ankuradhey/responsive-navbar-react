@@ -12,7 +12,7 @@ import NavbarCollapse from "../NavbarCollapse";
 import Button from "../Button";
 import Avatar from "../Avatar";
 import Card from "../Card";
-import { TalkFinanceLabel, ScheduleCallLabel, Devon, UnlockScore } from "../../config";
+import { TalkFinanceLabel, ScheduleCallLabel, Devon, UnlockScore, NavLinks } from "../../config";
 
 const Header: FC<{}> = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
@@ -28,21 +28,11 @@ const Header: FC<{}> = () => {
             </NavItem>
             <NavbarCollapse isOpen={!collapsed} onClick={clickHandler}>
                 <Nav lg={{ hidden: true }}>
-                    <NavItem>
-                        <NavLink href="/">For You</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Tasks</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Marketplace</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Accounts</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">Explore</NavLink>
-                    </NavItem>
+                    {NavLinks.map((link) => (
+                        <NavItem>
+                            <NavLink href={link.href}>{link.label}</NavLink>
+                        </NavItem>
+                    ))}
                 </Nav>
                 <Nav sm={{ visible: true }}>
                     <NavItem>
@@ -64,21 +54,11 @@ const Header: FC<{}> = () => {
                 </Nav>
             </NavbarCollapse>
             <Nav md={{ hidden: true }} sm={{ hidden: true }}>
-                <NavItem>
-                    <NavLink href="/">For You</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Tasks</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Marketplace</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Accounts</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/">Explore</NavLink>
-                </NavItem>
+                {NavLinks.map((link) => (
+                    <NavItem>
+                        <NavLink href={link.href}>{link.label}</NavLink>
+                    </NavItem>
+                ))}
             </Nav>
             <Nav sm={{ hidden: true }} right>
                 <NavItem>

@@ -2,8 +2,14 @@
 
 .card__container {
     display: flex;
+    flex-direction: column;
+    background: $color-white;
+}
+
+.card__container--header {
+    display: flex;
     height: pxToRem(90);
-    background-color: $color-white-light;
+    background-color: $color-white;
     justify-content: space-around;
 }
 
@@ -12,21 +18,29 @@
     font-size: pxToRem(50);
 }
 
-.card__content {
+.card__header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 150px;
 }
 
-.card__content--heading {
+.card__header--heading {
     color: $primary-text;
     font-size: pxToRem(14);
     font-weight: $semiBoldWeight;
 }
 
-.card__content--action {
+.card__header--action {
     color: $secondary-text;
     font-size: pxToRem(12);
     font-weight: $regularWeight;
+}
+
+.card__container--content {
+  background-color: $color-white;
+  margin-top: pxToRem(10);
+  border-top: 2px solid $color-white-light;
+  font-size: pxToRem(14);
+  font-weight: $regularWeight;
 }
