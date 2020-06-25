@@ -1,15 +1,54 @@
-.navbar-collapse {
-    &.collapsed {
-        display: none;
+@import "../../styles/grid.scss";
+
+.navbar-collapse-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .navbar-overlay {
+        &.expanded {
+            position: absolute;
+            z-index: 1;
+            background: #000;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    &.expanded {
-        flex-basis: 100%;
-        order: 2;
-        /*display:block;*/
-    }
+    .navbar-collapse {
+        position: relative;
 
-    .navbar-nav {
-        flex-direction: column;
+        &.collapsed {
+            display: none;
+        }
+
+        &.expanded {
+            position: absolute;
+            z-index: 2;
+            flex-basis: 100%;
+            right: 0;
+            top: 0;
+            background-color: #dedede;
+            order: 2;
+            width: $mobile-device-width;
+
+            & > .collapse-content {
+            }
+        }
+
+        & .close-action {
+            width: 20px;
+            height: 20px;
+            right: 10px;
+            top: 10px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+        }
     }
 }

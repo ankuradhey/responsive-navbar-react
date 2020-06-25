@@ -31,6 +31,9 @@ $media-queries: (
     xl: "@media (min-width: 80em)",
 );
 
+$tablet-device-width: 48em;
+$mobile-device-width: 32em;
+
 $grid-gutter: 30;
 $grid-gutter-width: 30px;
 $grid-count: 12;
@@ -45,12 +48,12 @@ $btn-border-radius: 3px;
 // Colors
 $color-black-dark: #000000;
 $color-white-light: #eeeeee;
-$primary-text: '#FFFFFF';
-$secondary-text: '#6D6260';
+$primary-text: "#FFFFFF";
+$secondary-text: "#6D6260";
 
 // Font-Family
-$primary-font: 'proxima-nova,arial,sans-serif';
-$secondary-font: 'acta-headline,times-bold,serif';
+$primary-font: "proxima-nova,arial,sans-serif";
+$secondary-font: "acta-headline,times-bold,serif";
 
 // Font-Weight
 $regularWeight: 400;

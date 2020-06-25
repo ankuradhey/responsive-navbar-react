@@ -7,7 +7,7 @@ const NavbarToggler: FC<TogglerProp> = ({ className = "", onClick, icon, collaps
         <button
             className={`navbar-toggler ${className}`}
             onClick={onClick}
-            style={{ backgroundImage: `url(${icon[collapsed ? "collapsed" : "expanded"]})` }}
+            style={{ backgroundImage: `url(${icon})` }}
         >
             &nbsp;
         </button>
