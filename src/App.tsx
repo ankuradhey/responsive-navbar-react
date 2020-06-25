@@ -86,7 +86,7 @@ const App = () => {
                 </Nav>
                 <NavItem lg={{ hidden: true }}>
                     <NavbarToggler
-                        icon={{ collapsed: HamburgerSVG, expanded: CloseSVG }}
+                        icon={HamburgerSVG}
                         onClick={clickHandler}
                         collapsed={collapsed}
                     />
