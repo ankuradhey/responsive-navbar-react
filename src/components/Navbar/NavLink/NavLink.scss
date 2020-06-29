@@ -1,0 +1,26 @@
+@import "../../../styles/grid.scss";
+
+.nav-item {
+    & .link {
+        text-decoration: none;
+        color: $secondary-color;
+        @include hover {
+            color: #000;
+
+            @include after {
+                background: #000;
+                height: 2px;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    $max-width-val: map-get($container-max-widths, "md");
+    @include mediaquery($max-width-val, false) {
+        // flex-basis: 100%;
+    }
+}

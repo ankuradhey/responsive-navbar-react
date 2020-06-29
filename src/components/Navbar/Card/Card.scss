@@ -1,0 +1,51 @@
+@import "../../../styles/grid.scss";
+
+.card__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $color-white;
+}
+
+.card__container--header {
+    display: flex;
+    height: pxToRem(90);
+    background-color: $color-white;
+    justify-content: space-around;
+    white-space: normal;
+    padding: 0 50px;
+}
+
+.card__icon {
+    align-self: center;
+    font-size: pxToRem(50);
+    flex-grow: 1;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+    flex-grow: 2;
+}
+
+.card__header--heading {
+    color: $primary-text;
+    font-size: pxToRem(14);
+    font-weight: $semiBoldWeight;
+}
+
+.card__header--action {
+    color: $secondary-text;
+    font-size: pxToRem(12);
+    font-weight: $regularWeight;
+}
+
+.card__container--content {
+  background-color: $color-white;
+  margin-top: pxToRem(10);
+  border-top: 2px solid $color-white-light;
+  font-size: pxToRem(14);
+  font-weight: $regularWeight;
+}

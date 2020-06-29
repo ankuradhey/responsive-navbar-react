@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { MdClass, MdDataUsage } from "react-icons/md";
 import HamburgerSVG from "./hamburger.svg";
-import CloseSVG from "./close.svg";
 import {
     Logo,
     Navbar,
@@ -13,7 +12,7 @@ import {
     Button,
     Avatar,
     Card,
-} from "./components";
+} from "./components/ResponsiveMenu";
 import {
     LogoText,
     TalkFinanceLabel,
@@ -28,7 +27,6 @@ const App = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
 
     const clickHandler = () => {
-        console.log(collapsed);
         setCollapsed(!collapsed);
     };
 
