@@ -11,8 +11,8 @@ import Actions from '../Actions';
 
 const ResponsiveMenu = () => {
     const ActionsArr = [
-      <Actions className="user" input="dkgndkgnd"/>,
-      <Actions className="schedule" input="uherher"/>
+      <Actions className="user" input="Devon Tepper"/>,
+      <Actions className="schedule" input="Schedule a call"/>
     ];
     return (
       <Navbar 
